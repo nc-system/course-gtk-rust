@@ -25,7 +25,11 @@ fn main() {
 
         
         // Buutons
-        let button = Button::with_label("Click me¡gtk4 = "0.7.3"")
+        let button = Button::with_label("Click me");
+        button.connect_clicked(|_| {
+            eprintln!("Clicked!");
+        });
+        window.set_child(Some(&button));
         
         // Show the window
         window.present();
