@@ -63,8 +63,6 @@ fn build_ui(application: &gtk::Application) {
         .build();
     container.append(&entry);
 
-    let passwordEntry = 
-
     // Button
     let button = gtk::Button::builder()
         .margin_top(10)
