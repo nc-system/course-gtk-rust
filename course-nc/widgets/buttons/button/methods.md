@@ -10,6 +10,7 @@ fn main() -> glib::ExitCode {
 }
 
 fn build_ui(application: &gtk::Application) {
+
     let window = gtk::ApplicationWindow::builder()
         .application(application)
         .title("First GTK Program")
@@ -30,4 +31,5 @@ fn build_ui(application: &gtk::Application) {
     window.set_child(Some(&button));
 
     window.present();
+    
 }

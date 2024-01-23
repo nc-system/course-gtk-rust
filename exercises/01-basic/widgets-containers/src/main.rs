@@ -32,6 +32,7 @@ fn build_ui(application: &gtk::Application) {
     let display = gdk::Display::default().unwrap();
     let clipboard = display.clipboard();
 
+    // Container
     let container = gtk::Box::builder()
         .orientation(gtk::Orientation::Vertical)
         .margin_top(24)
@@ -43,7 +44,41 @@ fn build_ui(application: &gtk::Application) {
         .spacing(24)
         .build();
 
-   
+    // Title
+    let title = gtk::Label::builder()
+        .label("Label")
+        .halign(gtk::Align::Start)
+        .build();
+    title.add_css_class("title-2");
+    container.append(&title);
+
+    // Entry
+    let entry = gtk::Entry::builder()
+        .margin_top(10)
+        .margin_bottom(10)
+        .margin_start(10)
+        .margin_end(10)
+        .halign(gtk::Align::Center)
+        .valign(gtk::Align::Center)
+        .build();
+    container.append(&entry);
+
+    let passwordEntry = 
+
+    // Button
+    let button = gtk::Button::builder()
+        .margin_top(10)
+        .margin_bottom(10)
+        .margin_start(10)
+        .margin_end(10)
+        .halign(gtk::Align::Center)
+        .valign(gtk::Align::Center)
+        .label("Click Me!")
+        .build();
+
+    container.append(&button);
+
+    // container.append(&texture_container);
     window.set_child(Some(&container));
     window.present();
 }
